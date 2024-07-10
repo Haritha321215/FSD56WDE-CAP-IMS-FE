@@ -13,7 +13,7 @@ const DashboardWrapper = () => {
   const navigate = useNavigate();
 
   const { user } = useLoaderData();
-    // console.log(user);
+  // console.log(user);
   const handleLogout = () => {
     // log the user out
     userServices
@@ -32,10 +32,11 @@ const DashboardWrapper = () => {
   };
 
   return (
-    <div>
-      <p>
+    <div className="">
+      
+      <p className="text-primary d-flex flex-row-reverse">
+        <button className="btn btn-outline-primary btn-sm m-1" onClick={handleLogout}>logout</button>
         Welcome {user ? user.data.user.name : "Guest"}!{" "}
-        <button onClick={handleLogout}>logout</button>
       </p>
 
       <div>

@@ -1,18 +1,9 @@
 import { Outlet } from "react-router-dom";
 function Landing() {
-  const styles = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    width: '100%',
-    textAlign: 'center'
-}
+  
   return (
-    <div style={styles}>
-      <h1>Inventory Management System</h1>
-      <p>Welcome</p>
+    <div className="d-flex flex-column justify-content-center align-items-center mt-4 text-primary">
+      <h5> The Right Products in The Right Place at The Right Time</h5>
       <Outlet />
     </div>
   )

@@ -1,23 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import userServices from "../services/userServices";
+import userServices from "../../services/userServices";
 
 const Register = () => {
 
     const navigate = useNavigate();
 
-    const styles = {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        gap: '20px',
-        border: '1px solid #ccc',
-        padding: '45px',
-    }
-
-    const itemStyle = {
-        marginBottom: '10px',
-    }
+   
 
     const handleRegister = (e) => {
         // prevent the default form submission
@@ -48,35 +36,37 @@ const Register = () => {
             });
     }
 
+   
+
   return (
-    <div style={styles}>
+    <div className="d-flex flex-column align-items-center justify-content-between m-5">
         <form onSubmit={handleRegister}>
-            <div style={itemStyle}>
+            <div className="mb-3">
                 <input
                     type="text" 
                     placeholder="Name..."      
                 />
               </div> 
-              <div style={itemStyle}>
+              <div className="mb-3">
                   <input 
                       type="email"
                       placeholder="Email..."
                   />
               </div>  
-                <div style={itemStyle}>
+                <div className="mb-3">
                     <input 
                         type="password"
                         placeholder="Password..."
                   />
               </div>
-              <div style={itemStyle}>
+              <div className="mb-3">
                   <input 
                       type="text"
                       placeholder="Location..."
                   />
               </div>
-              <button type="submit">Register</button>
-              <p>Already have an account? <Link to='/login'>Login</Link></p>
+              <button className="mb-3 btn btn-outline-primary" type="submit">Register</button>
+              <p className="text-dark">Already have an account? <Link to='/login'>Login</Link></p>
         </form>      
     </div>
   )
